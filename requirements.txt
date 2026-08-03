@@ -1,0 +1,9 @@
+streamlit>=1.36.0
+google-generativeai
+gTTS
+librosa
+numpy
+soundfile
+torch
+transformers
+phonemizer
