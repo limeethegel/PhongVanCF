@@ -543,14 +543,12 @@ def get_gemini_model(model_name="gemini-flash-latest"):
 def gemini_paraphrase(question, model_name):
     model = get_gemini_model(model_name)
     prompt = (
-        "Tu es un examinateur Campus France. Reformule la question suivante en français, "
-        "en gardant EXACTEMENT le même sens et le même niveau de difficulté, mais avec des mots "
-        "et une structure de phrase différents.\n\n"
-        "Directives complémentaires pour la reformulation :\n"
-        "- Sois créatif et varie les angles de vue (ex: tu peux poser une question indirecte, "
-        "utiliser des tournures comme 'envisager de', 'projeter de', ou interroger sur un aspect spécifique "
-        "de la même intention comme le travail en France après le diplôme).\n"
-        "- Conserve un français naturel et authentique d'un examinateur français.\n\n"
+        "Tu es un examinateur Campus France. Reformule la question suivante en français "
+        "de manière naturelle et fluide à l'oral, comme lors d'un VRAI entretien.\n\n"
+        "Directives de reformulation :\n"
+        "- Ne cherche PAS à tout paraphraser à tout prix. Tu peux garder les mots clés simples et naturels (ex: 'ville', 'études', 'établissement').\n"
+        "- Varie plutôt la structure de la phrase, la tournure de phrase ou l'angle de vue (ex: passer d'une question directe à une question indirecte).\n"
+        "- Évite le langage trop lourd, administratif ou exagérément académique. La phrase doit rester naturelle et parlante à l'oral.\n\n"
         "Réponds UNIQUEMENT avec la nouvelle question, sans aucun autre texte.\n\n"
         f"Question originale : {question}"
     )
